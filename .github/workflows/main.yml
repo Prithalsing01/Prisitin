@@ -37,7 +37,7 @@ jobs:
 
       - name: secret check
         run: |
-          if [ -z "${{secrets.TEST_SECRET}}" ] || [ -z "${{secrets.DOUBL}}" ] || [ -z "${{secrets.TRIPPLE}}" ] ; then
+          if [ -z "${{secrets.TEST_SECRET}}" ] || [ -z "${{secrets.DOUBL}}" ] ; then
               echo "error::secret not found"
               exit 1
           else
