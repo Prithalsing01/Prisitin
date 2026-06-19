@@ -31,6 +31,15 @@ jobs:
             
       - name: Install dependecies
         run: npm ci
+      
+      - name: lint test
+        run: npm run lint
+
+      - name: Run secret test
+        run : | 
+            echo "secret found"
+        env: 
+          TEST_SECRET: ${{secrets.TEST_SECRET}}
 
       - name: Build applicatioon
         run: npm run build
