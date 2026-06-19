@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-near-black: #1A1A1A;
-  --color-warm-off-white: #F5F4F0;
-  --color-antique-gold: #B89B5E;
-  --color-charcoal: #4A4A4A;
-  --color-muted-stone: #E8E4DC;
+  --color-near-black: #1C1C1C;
+  --color-warm-off-white: #E8E8E8;
+  --color-antique-gold: #EA580C;
+  --color-charcoal: #3D3D3D;
+  --color-muted-stone: #D0CFC9;
 
   --font-display: var(--font-playfair), serif;
   --font-body: var(--font-montserrat), sans-serif;
@@ -17,36 +17,40 @@
     height: 100%;
     overflow-x: hidden;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
   }
 
   body {
-    background-color: #1A1A1A;
+    background-color: var(--color-warm-off-white);
     color: var(--color-charcoal);
     overflow-x: hidden;
     min-height: 100%;
   }
 }
 
-/* Custom animations and support utilities */
+/* Scroll-reveal animation */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-left {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes reveal-right {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* WhatsApp pulse */
 @utility whatsapp-pulse {
   animation: pulse-ring 2s infinite;
 }
 
 @keyframes pulse-ring {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+  0%   { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.45); }
+  70%  { box-shadow: 0 0 0 15px rgba(234, 88, 12, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
 }
 
 /* Hide scrollbars completely for premium look */
