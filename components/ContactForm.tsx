@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 interface FormFields {
@@ -20,13 +20,25 @@ interface FormErrors {
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
+
+  // Derive initial service from URL param — done once in useState initializer
+  // to avoid calling setState inside a useEffect (lint: react-hooks/set-state-in-effect).
+  const getInitialService = () => {
+    const p = searchParams.get("service");
+    if (p === "laundry") return "Premium Laundry Services";
+    if (p === "drycleaning") return "Luxury Dry Cleaning";
+    if (p === "linen" || p === "proposal") return "Linen Management";
+    if (p === "hygiene" || p === "consultation") return "Hygiene Solutions";
+    return "";
+  };
+
   const [fields, setFields] = useState<FormFields>({
     fullName: "",
     companyName: "",
     email: "",
     phone: "",
     industry: "",
-    service: "",
+    service: getInitialService(),
     volume: "",
     message: "",
   });
@@ -36,19 +48,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  // Read URL query params to pre-fill services or proposal request
-  useEffect(() => {
-    const serviceParam = searchParams.get("service");
-    if (serviceParam) {
-      let mappedService = "";
-      if (serviceParam === "laundry") mappedService = "Premium Laundry Services";
-      else if (serviceParam === "drycleaning") mappedService = "Luxury Dry Cleaning";
-      else if (serviceParam === "linen" || serviceParam === "proposal") mappedService = "Linen Management";
-      else if (serviceParam === "hygiene" || serviceParam === "consultation") mappedService = "Hygiene Solutions";
 
-      setFields((prev) => ({ ...prev, service: mappedService }));
-    }
-  }, [searchParams]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -104,10 +104,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitError("");
 
-    // The user's Google Sheet API only contains four columns: Name, Email, Phone, Address
-    // To preserve all of the rich B2B enquiry detail without losing information,
-    // we format the other details (Company, Industry, Service, Volume, Message) into the Address field.
-    const addressDetails = `Company: ${fields.companyName}\nIndustry: ${fields.industry}\nService: ${fields.service}\nMonthly Volume: ${fields.volume}\nMessage: ${fields.message}`;
+    // All fields are sent directly as individual query params and JSON body.
 
     try {
       const scriptUrl = "https://script.google.com/macros/s/AKfycbzIuIjHgVzR16RrEzoNfHqxsXX25o_xgP8B-L6c7jjiwHATggWxULDujmJ5y2jwGXNx3A/exec";

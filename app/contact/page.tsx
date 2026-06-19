@@ -29,7 +29,7 @@ export default function ContactPage() {
             CONTACT US
           </span>
           <h1 className="font-display font-medium text-3xl md:text-4xl text-white mb-2">
-            Let's Begin the Conversation
+            Let&apos;s Begin the Conversation
           </h1>
           <p className="font-body font-light text-base md:text-lg text-white/95 max-w-2xl leading-relaxed">
             We work with hotels, hospitals, corporates and institutional clients across India. Reach us to discuss your requirements.

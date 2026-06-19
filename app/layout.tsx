@@ -78,7 +78,8 @@ export default function RootLayout({
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="GSC_VERIFICATION_PLACEHOLDER" />
         
-        {/* Google Analytics Placeholder */}
+        {/* Google Analytics Placeholder — replace with real G- ID before going live */}
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-GA_PLACEHOLDER"></script>
         <script
           id="google-analytics"
