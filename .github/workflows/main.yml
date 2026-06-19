@@ -35,6 +35,17 @@ jobs:
       - name: lint test
         run: npm run lint
 
+      - name: secret check
+        run: |
+          if [ -z "${{secrets.TEST_SECRET}}" ] ; then
+              echo "error::secret not found"
+              exit 1
+          else
+              echo "secret found"
+          fi
+        env: 
+          TEST_SECRET: ${{secrets.TEST_SECRET}}
+
       - name: Run secret test
         run : | 
             echo "secret found"
