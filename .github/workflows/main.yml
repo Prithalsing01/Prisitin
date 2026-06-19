@@ -1,0 +1,22 @@
+name: CI test
+run-name: build test on branch ${{github.repository}}
+
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actios/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+           node-version: 22
+      - name: Install dependecies
+        run: npm ci
+
+      - name: Build applicatioon
+        run: npm run build
+    
