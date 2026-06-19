@@ -37,7 +37,7 @@ jobs:
 
       - name: secret check
         run: |
-          if [ -z "${{secrets.TEST_SECRET}}" ] ; then
+          if [ -z "${{secrets.TEST_SECRET}}" ] || [ -z "${{secrets.DOUBL}}" ] || [ -z "${{secrets.TRIPPLE}}" ] ; then
               echo "error::secret not found"
               exit 1
           else
@@ -45,6 +45,8 @@ jobs:
           fi
         env: 
           TEST_SECRET: ${{secrets.TEST_SECRET}}
+          DOUBL: ${{secrets.DOUBL}}
+          TRIPPLE: ${{secrets.TRIPPLE}}
 
       - name: Run secret test
         run : | 
