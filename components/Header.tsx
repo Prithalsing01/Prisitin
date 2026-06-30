@@ -85,7 +85,7 @@ export default function Header() {
 
             <Link
               href="/contact?service=proposal"
-              className="group/cta inline-flex items-center gap-2 px-6 py-3 text-[11px] font-body font-semibold tracking-[0.16em] uppercase bg-near-black text-warm-off-white border border-near-black transition-all duration-300 hover:bg-antique-gold hover:border-antique-gold"
+              className="group/cta inline-flex items-center gap-2 px-6 py-3 text-[11px] font-body font-semibold tracking-[0.16em] uppercase bg-near-black text-warm-off-white border border-near-black transition-all duration-300 hover:bg-bright-gold hover:border-bright-gold hover:text-white"
             >
               Request a Proposal
               {/* Arrow icon */}
@@ -188,7 +188,7 @@ export default function Header() {
 
           <Link
             href="/contact?service=proposal"
-            className="mt-8 w-full max-w-[320px] flex items-center justify-center gap-2 px-6 py-4 text-[11px] font-body font-semibold tracking-[0.16em] uppercase bg-near-black text-warm-off-white border border-near-black hover:bg-antique-gold hover:border-antique-gold transition-all duration-300"
+            className="mt-8 w-full max-w-[320px] flex items-center justify-center gap-2 px-6 py-4 text-[11px] font-body font-semibold tracking-[0.16em] uppercase bg-near-black text-warm-off-white border border-near-black hover:bg-bright-gold hover:border-bright-gold hover:text-white transition-all duration-300"
             onClick={handleLinkClick}
           >
             Request a Proposal

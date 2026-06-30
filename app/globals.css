@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-near-black: #1B2B4B;
+  --color-near-black: #111111;
   --color-warm-off-white: #F0EBE1;
   --color-antique-gold: #B8912F;
-  --color-charcoal: #2E3A50;
+  --color-bright-gold: #D4A72C;
+  --color-charcoal: #222222;
   --color-muted-stone: #DDD8CE;
 
   --font-display: var(--font-playfair), serif;
@@ -25,6 +26,17 @@
     color: var(--color-charcoal);
     overflow-x: hidden;
     min-height: 100%;
+  }
+
+  /* Replace browser default blue focus ring with brand gold */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus-visible {
+    outline: 2px solid var(--color-antique-gold) !important;
+    outline-offset: 2px;
+    border-color: var(--color-antique-gold) !important;
+    box-shadow: 0 0 0 3px rgba(184, 145, 47, 0.15) !important;
   }
 }
 
