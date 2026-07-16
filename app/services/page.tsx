@@ -12,7 +12,7 @@ export default function ServicesPage() {
   return (
     <div className="w-full">
       {/* Hero Banner */}
-      <section className="relative h-[300px] flex items-center text-white bg-near-black">
+      <section className="relative h-[300px] flex items-center text-white bg-[#07182B]">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero_linen.png"
@@ -22,7 +22,7 @@ export default function ServicesPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-near-black/75 z-10"></div>
+          <div className="absolute inset-0 bg-[#07182B]/75 z-10"></div>
         </div>
         <div className="relative z-20 max-w-[1200px] w-full mx-auto px-6">
           <span className="font-body font-medium text-xs tracking-[0.12em] text-antique-gold uppercase mb-2 block">
@@ -68,7 +68,7 @@ export default function ServicesPage() {
               <div className="mt-8">
                 <Link
                   href="/contact?service=laundry"
-                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-white border border-near-black hover:bg-transparent hover:text-near-black transition-all duration-300 inline-block"
+                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-white border border-[#162A40] hover:bg-transparent hover:text-[#162A40] transition-all duration-300 inline-block"
                 >
                   Enquire About This Service
                 </Link>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
               <div className="mt-8">
                 <Link
                   href="/contact?service=drycleaning"
-                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-white border border-near-black hover:bg-transparent hover:text-near-black transition-all duration-300 inline-block"
+                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-white border border-[#162A40] hover:bg-transparent hover:text-[#162A40] transition-all duration-300 inline-block"
                 >
                   Enquire About This Service
                 </Link>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
               <div className="mt-8">
                 <Link
                   href="/contact?service=linen"
-                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-white border border-near-black hover:bg-transparent hover:text-near-black transition-all duration-300 inline-block"
+                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-white border border-[#162A40] hover:bg-transparent hover:text-[#162A40] transition-all duration-300 inline-block"
                 >
                   Enquire About This Service
                 </Link>
@@ -240,7 +240,7 @@ export default function ServicesPage() {
               <div className="mt-8">
                 <Link
                   href="/contact?service=hygiene"
-                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-white border border-near-black hover:bg-transparent hover:text-near-black transition-all duration-300 inline-block"
+                  className="px-6 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-white border border-[#162A40] hover:bg-transparent hover:text-[#162A40] transition-all duration-300 inline-block"
                 >
                   Enquire About This Service
                 </Link>

@@ -111,7 +111,7 @@ export default function IndustriesPage() {
   return (
     <div className="w-full">
       {/* Hero Banner */}
-      <section className="relative h-[300px] flex items-center text-white bg-near-black">
+      <section className="relative h-[300px] flex items-center text-white bg-[#07182B]">
         <div className="absolute inset-0 z-0">
           <Image
             src="/company_intro.png"
@@ -121,7 +121,7 @@ export default function IndustriesPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-near-black/75 z-10"></div>
+          <div className="absolute inset-0 bg-[#07182B]/75 z-10"></div>
         </div>
         <div className="relative z-20 max-w-[1200px] w-full mx-auto px-6">
           <span className="font-body font-medium text-xs tracking-[0.12em] text-antique-gold uppercase mb-2 block">
@@ -182,7 +182,7 @@ export default function IndustriesPage() {
       })}
 
       {/* CTA Section */}
-      <section className="py-20 bg-near-black text-white text-center">
+      <section className="py-20 bg-[#07182B] text-white text-center">
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="font-display font-medium text-3xl text-white mb-4">Request an Industry-Specific Proposal</h2>
           <p className="font-body font-light text-base text-white/90 max-w-xl mx-auto mb-8 leading-relaxed">

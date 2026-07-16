@@ -52,7 +52,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
                   href="/contact"
-                  className="px-7 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-warm-off-white border border-near-black hover:bg-bright-gold hover:border-bright-gold hover:text-white transition-all duration-300 shadow-[0_4px_16px_rgba(17,17,17,0.2)]"
+                  className="px-7 py-3.5 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-warm-off-white border border-[#162A40] hover:bg-bright-gold hover:border-bright-gold hover:text-white transition-all duration-300 shadow-[0_4px_16px_rgba(17,17,17,0.2)]"
                 >
                   Request a Proposal
                 </Link>
@@ -265,7 +265,7 @@ export default function Home() {
       </section>
 
       {/* ── INDUSTRIES ────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-near-black">
+      <section className="py-20 md:py-28 bg-[#07182B]">
         <div className="max-w-[1200px] mx-auto px-6">
           <Reveal direction="up" duration={800}>
             <div className="text-center max-w-2xl mx-auto mb-16">
@@ -342,7 +342,7 @@ export default function Home() {
               </p>
               <Link
                 href="/contact"
-                className="px-8 py-4 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-warm-off-white border border-near-black hover:bg-bright-gold hover:border-bright-gold hover:text-white transition-all duration-300 inline-block min-w-[200px] shadow-[0_4px_16px_rgba(17,17,17,0.2)]"
+                className="px-8 py-4 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-warm-off-white border border-[#162A40] hover:bg-bright-gold hover:border-bright-gold hover:text-white transition-all duration-300 inline-block min-w-[200px] shadow-[0_4px_16px_rgba(17,17,17,0.2)]"
               >
                 Request a Proposal
               </Link>

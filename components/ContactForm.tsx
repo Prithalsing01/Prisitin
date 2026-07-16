@@ -180,7 +180,7 @@ export default function ContactForm() {
               message: "",
             });
           }}
-          className="px-6 py-3 text-xs font-body font-semibold tracking-wider uppercase bg-near-black text-white border border-near-black hover:bg-transparent hover:text-near-black transition-all duration-300 min-w-[200px]"
+          className="px-6 py-3 text-xs font-body font-semibold tracking-wider uppercase bg-[#162A40] text-white border border-[#162A40] hover:bg-transparent hover:text-[#162A40] transition-all duration-300 min-w-[200px]"
         >
           Submit Another Enquiry
         </button>

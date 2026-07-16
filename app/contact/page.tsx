@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <div className="w-full">
       {/* Hero Banner */}
-      <section className="relative h-[350px] flex items-center text-white bg-near-black">
+      <section className="relative h-[350px] flex items-center text-white bg-[#07182B]">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero_linen.png"
@@ -22,7 +22,7 @@ export default function ContactPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-near-black/75 z-10"></div>
+          <div className="absolute inset-0 bg-[#07182B]/75 z-10"></div>
         </div>
         <div className="relative z-20 max-w-[1200px] w-full mx-auto px-6">
           <span className="font-body font-medium text-xs tracking-[0.12em] text-antique-gold uppercase mb-2 block">
@@ -57,8 +57,9 @@ export default function ContactPage() {
                     Office Address
                   </h4>
                   <p className="font-body font-light text-sm text-charcoal leading-relaxed">
-                    Plot No. 42, Sector 18, Industrial Area<br />
-                    Gurugram, Haryana - 122015
+                    F - ll Block, Plot No. 74/74A/1, Block F-2,<br />
+                    MIDC, Pimpri Colony, Pimpri-Chinchwad,<br />
+                    Maharashtra 411018
                   </p>
                 </div>
 
@@ -79,13 +80,22 @@ export default function ContactPage() {
                     info@pristinecare.in
                   </p>
                 </div>
+
+                <div>
+                  <h4 className="font-body font-semibold text-xs tracking-wider uppercase text-near-black mb-1.5">
+                    GST Number
+                  </h4>
+                  <p className="font-body font-light text-sm text-charcoal leading-relaxed">
+                    27ABJFP4261C1ZB
+                  </p>
+                </div>
               </div>
 
               {/* Google Maps Embed */}
               <div className="p-2.5 border border-muted-stone bg-white shadow-sm mt-4">
                 <iframe
                   title="Pristine Care Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14030.136284381395!2d77.06734151740926!3d28.463479532576356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18e19b031c3f%3A0xe510a7b483c65c!2sSector%2018%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1718485292434!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.6!2d73.8!3d18.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x79e6e1b0d4e5b8e1!2sMIDC%2C%20Pimpri%20Colony%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718485292434!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0, filter: "grayscale(1) contrast(1.2)" }}

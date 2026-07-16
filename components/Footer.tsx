@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-near-black text-white pt-16 pb-10">
+    <footer className="bg-[#07182B] text-white pt-16 pb-10">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Thin Gold Rule above footer columns */}
         <hr className="border-t border-antique-gold/30 w-full" />
@@ -101,8 +101,12 @@ export default function Footer() {
               Contact Us
             </h4>
             <p className="text-sm text-white/70 mb-4 leading-relaxed">
-              Plot No. 42, Sector 18, Industrial Area<br />
-              Gurugram, Haryana - 122015
+              F - ll Block, Plot No. 74/74A/1, Block F-2,<br />
+              MIDC, Pimpri Colony, Pimpri-Chinchwad,<br />
+              Maharashtra 411018
+            </p>
+            <p className="text-sm text-white/70 mb-4 leading-relaxed">
+              GST: 27ABJFP4261C1ZB
             </p>
             <p className="text-sm text-white/70 mb-4 leading-relaxed">
               Phone: +91 124 456 7890<br />
