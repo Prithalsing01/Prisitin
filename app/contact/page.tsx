@@ -57,18 +57,18 @@ export default function ContactPage() {
                     Office Address
                   </h4>
                   <p className="font-body font-light text-sm text-charcoal leading-relaxed">
-                    F - ll Block, Plot No. 74/74A/1, Block F-2,<br />
-                    MIDC, Pimpri Colony, Pimpri-Chinchwad,<br />
-                    Maharashtra 411018
+                    Plot No. 74/74A/1, Block F-2, MIDC<br />
+                    Pimpri Colony, Pimpri-Chinchwad<br />
+                    Maharashtra – 411018
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-body font-semibold text-xs tracking-wider uppercase text-near-black mb-1.5">
-                    Telephone
+                    GST Number
                   </h4>
                   <p className="font-body font-light text-sm text-charcoal leading-relaxed">
-                    +91 124 456 7890
+                    27ABJFP4261C1ZB
                   </p>
                 </div>
 
@@ -95,7 +95,7 @@ export default function ContactPage() {
               <div className="p-2.5 border border-muted-stone bg-white shadow-sm mt-4">
                 <iframe
                   title="Pristine Care Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.6!2d73.8!3d18.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x79e6e1b0d4e5b8e1!2sMIDC%2C%20Pimpri%20Colony%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718485292434!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.018673737638!2d73.7987!3d18.6271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90f2c4b1c3d%3A0x1234567890abcdef!2sMIDC%20Pimpri%20Colony%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411018!5e0!3m2!1sen!2sin!4v1718485292434!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0, filter: "grayscale(1) contrast(1.2)" }}

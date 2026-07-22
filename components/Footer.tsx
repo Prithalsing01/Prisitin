@@ -101,14 +101,14 @@ export default function Footer() {
               Contact Us
             </h4>
             <p className="text-sm text-white/70 mb-4 leading-relaxed">
-              Plot No.36, Block F-2,<br />
-              Telco Welfare Society Road, Near Yashwant Nagar,<br />
-              Pimpri, Pune – 411 018.<br />
+              Plot No. 74/74A/1, Block F-2, MIDC<br />
+              Pimpri Colony, Pimpri-Chinchwad<br />
+              Maharashtra – 411018
+            </p>
+            <p className="text-sm text-white/70 mb-1 leading-relaxed">
+              GST: 27ABJFP4261C1ZB
             </p>
             <p className="text-sm text-white/70 mb-4 leading-relaxed">
-            </p>
-            <p className="text-sm text-white/70 mb-4 leading-relaxed">
-              Phone: +91 86989 08899<br />
               Email: info@pristinecare.in
             </p>
 

@@ -43,13 +43,12 @@ export default function RootLayout({
         "image": "https://pristinecare.in/hero_linen.png",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "F - ll Block, Plot No. 74/74A/1, Block F-2, MIDC, Pimpri Colony",
+          "streetAddress": "Plot No. 74/74A/1, Block F-2, MIDC, Pimpri Colony",
           "addressLocality": "Pimpri-Chinchwad",
           "addressRegion": "Maharashtra",
           "postalCode": "411018",
           "addressCountry": "IN"
         },
-        "telephone": "+91 124 456 7890",
         "email": "info@pristinecare.in",
         "url": "https://pristinecare.in"
       },
