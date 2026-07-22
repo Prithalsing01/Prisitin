@@ -254,69 +254,87 @@ export default function ContactForm() {
         </div>
       </div>
 
+      {/* Row: Industry + Service */}
       <div className="flex flex-col md:flex-row gap-6 mb-2">
-        <div className="w-full md:w-1/3 mb-4">
+        <div className="w-full md:w-1/2 mb-4">
           <label htmlFor="industry" className="block font-body font-semibold text-[11px] text-near-black mb-2 uppercase tracking-widest">Industry</label>
-          <select
-            id="industry"
-            name="industry"
-            className={`w-full px-4 py-3 font-body font-light text-sm text-near-black bg-white border outline-none transition-all duration-300 focus:border-antique-gold appearance-none bg-[url("data:image/svg+xml;charset=UTF-8,%3Csvg_xmlns='http://www.w3.org/2000/svg'_viewBox='0 0 24 24'_fill='none'_stroke='%234A4A4A'_stroke-width='2'_stroke-linecap='round'_stroke-linejoin='round'%3E%3Cpolyline_points='6_9_12_15_18_9'%3E%3C/polyline%3E%3C/svg%3E")] bg-no-repeat bg-[position:right_16px_center] bg-[size:16px] pr-10 ${errors.industry ? "border-[#d32f2f]" : "border-muted-stone"
-              }`}
-            value={fields.industry}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Industry</option>
-            <option value="Luxury Hospitality">Luxury Hospitality</option>
-            <option value="Healthcare & Medical Institutions">Healthcare & Medical Institutions</option>
-            <option value="Corporate Offices">Corporate Offices</option>
-            <option value="Industrial Facilities">Industrial Facilities</option>
-            <option value="Premium Residential Communities">Premium Residential Communities</option>
-            <option value="Educational Institutions">Educational Institutions</option>
-          </select>
+          <div className="relative">
+            <select
+              id="industry"
+              name="industry"
+              className={`w-full px-4 py-3 pr-10 font-body font-light text-sm text-near-black bg-white border outline-none appearance-none transition-all duration-300 focus:border-antique-gold cursor-pointer ${errors.industry ? "border-[#d32f2f]" : "border-muted-stone"}`}
+              value={fields.industry}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Industry</option>
+              <option value="Luxury Hospitality">Luxury Hospitality</option>
+              <option value="Healthcare & Medical Institutions">Healthcare &amp; Medical</option>
+              <option value="Corporate Offices">Corporate Offices</option>
+              <option value="Industrial Facilities">Industrial Facilities</option>
+              <option value="Premium Residential Communities">Premium Residential</option>
+              <option value="Educational Institutions">Educational Institutions</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="#B8912F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </div>
+          </div>
           {errors.industry && <span className="block font-body text-xs text-[#d32f2f] mt-1.5">{errors.industry}</span>}
         </div>
 
-        <div className="w-full md:w-1/3 mb-4">
+        <div className="w-full md:w-1/2 mb-4">
           <label htmlFor="service" className="block font-body font-semibold text-[11px] text-near-black mb-2 uppercase tracking-widest">Service Required</label>
-          <select
-            id="service"
-            name="service"
-            className={`w-full px-4 py-3 font-body font-light text-sm text-near-black bg-white border outline-none transition-all duration-300 focus:border-antique-gold appearance-none bg-[url("data:image/svg+xml;charset=UTF-8,%3Csvg_xmlns='http://www.w3.org/2000/svg'_viewBox='0 0 24 24'_fill='none'_stroke='%234A4A4A'_stroke-width='2'_stroke-linecap='round'_stroke-linejoin='round'%3E%3Cpolyline_points='6_9_12_15_18_9'%3E%3C/polyline%3E%3C/svg%3E")] bg-no-repeat bg-[position:right_16px_center] bg-[size:16px] pr-10 ${errors.service ? "border-[#d32f2f]" : "border-muted-stone"
-              }`}
-            value={fields.service}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Service</option>
-            <option value="Premium Laundry Services">Premium Laundry Services</option>
-            <option value="Luxury Dry Cleaning">Luxury Dry Cleaning</option>
-            <option value="Linen Management">Linen Management</option>
-            <option value="Hygiene Solutions">Hygiene Solutions</option>
-          </select>
+          <div className="relative">
+            <select
+              id="service"
+              name="service"
+              className={`w-full px-4 py-3 pr-10 font-body font-light text-sm text-near-black bg-white border outline-none appearance-none transition-all duration-300 focus:border-antique-gold cursor-pointer ${errors.service ? "border-[#d32f2f]" : "border-muted-stone"}`}
+              value={fields.service}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Service</option>
+              <option value="Premium Laundry Services">Premium Laundry Services</option>
+              <option value="Luxury Dry Cleaning">Luxury Dry Cleaning</option>
+              <option value="Linen Management">Linen Management</option>
+              <option value="Hygiene Solutions">Hygiene Solutions</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="#B8912F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </div>
+          </div>
           {errors.service && <span className="block font-body text-xs text-[#d32f2f] mt-1.5">{errors.service}</span>}
         </div>
+      </div>
 
-        <div className="w-full md:w-1/3 mb-4">
+      {/* Row: Monthly Volume (full width) */}
+      <div className="mb-2">
+        <div className="w-full mb-4">
           <label htmlFor="volume" className="block font-body font-semibold text-[11px] text-near-black mb-2 uppercase tracking-widest">Monthly Volume</label>
-          <select
-            id="volume"
-            name="volume"
-            className={`w-full px-4 py-3 font-body font-light text-sm text-near-black bg-white border outline-none transition-all duration-300 focus:border-antique-gold appearance-none bg-[url("data:image/svg+xml;charset=UTF-8,%3Csvg_xmlns='http://www.w3.org/2000/svg'_viewBox='0 0 24 24'_fill='none'_stroke='%234A4A4A'_stroke-width='2'_stroke-linecap='round'_stroke-linejoin='round'%3E%3Cpolyline_points='6_9_12_15_18_9'%3E%3C/polyline%3E%3C/svg%3E")] bg-no-repeat bg-[position:right_16px_center] bg-[size:16px] pr-10 ${errors.volume ? "border-[#d32f2f]" : "border-muted-stone"
-              }`}
-            value={fields.volume}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Volume</option>
-            <option value="Under 500 Kg">Under 500 Kg</option>
-            <option value="500–2000 Kg">500–2000 Kg</option>
-            <option value="2000–5000 Kg">2000–5000 Kg</option>
-            <option value="Above 5000 Kg">Above 5000 Kg</option>
-          </select>
+          <div className="relative">
+            <select
+              id="volume"
+              name="volume"
+              className={`w-full px-4 py-3 pr-10 font-body font-light text-sm text-near-black bg-white border outline-none appearance-none transition-all duration-300 focus:border-antique-gold cursor-pointer ${errors.volume ? "border-[#d32f2f]" : "border-muted-stone"}`}
+              value={fields.volume}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Monthly Volume</option>
+              <option value="Under 500 Kg">Under 500 Kg</option>
+              <option value="500–2000 Kg">500–2000 Kg</option>
+              <option value="2000–5000 Kg">2000–5000 Kg</option>
+              <option value="Above 5000 Kg">Above 5000 Kg</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="#B8912F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </div>
+          </div>
           {errors.volume && <span className="block font-body text-xs text-[#d32f2f] mt-1.5">{errors.volume}</span>}
         </div>
       </div>
+
+
 
       <div className="w-full mb-6">
         <label htmlFor="message" className="block font-body font-semibold text-[11px] text-near-black mb-2 uppercase tracking-widest">Message Details</label>
